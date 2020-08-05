@@ -16,7 +16,7 @@ SELECT * FROM tipos_pets;
 INSERT INTO veterinarios (Nome, DescricaoVet, IdClinica) VALUES ('Augusto', 31425, 1);
 SELECT * FROM veterinarios;
 
-INSERT INTO raca (DescricaoRaca, IdTipoPet) VALUES ('Siamês', 2);
+INSERT INTO raca (DescricaoRaca, IdTipoPet) VALUES ('Prsa', 1);
 SELECT * FROM raca;
 
 INSERT INTO pets (Nome, DataNascimento, IdRaca, IdDono) VALUES ('Frida', 05/09/2010, 2, 7);

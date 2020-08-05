@@ -7,7 +7,7 @@ USE optus;
 INSERT INTO artistas (Nome, IdEstilo) VALUES ('BK', 1);
 SELECT * FROM artistas;
 
-INSERT INTO estilos (Nome) VALUES ('HipHop/Rap');
+INSERT INTO estilos (Nome) VALUES ('Black Music');
 SELECT * FROM estilos;
 
 INSERT INTO albuns (Nome, DataLancamento, Localizacao, StatusAlbum, IdArtista) VALUES ('Gigantes', 2018-05-02, 'Rio de Janeiro', 'Ativo', 2);
