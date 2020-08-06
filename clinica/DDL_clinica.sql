@@ -10,13 +10,15 @@ CREATE TABLE clinicas(
 	Nome VARCHAR (20) NOT NULL,
 	Endereco VARCHAR (100) NOT NULL
 );
-/*DROP TABLE clínica;*/
+-- DROP TABLE clínica;
 
 /*Criação da tabela - Donos*/
 CREATE TABLE donos(
 	IdDono INT IDENTITY PRIMARY KEY NOT NULL,
 	Nome VARCHAR (100) NOT NULL
 );
+
+-- DROP TABLE donos;
 
 /*Criação da tabela - Tipos de Pets*/
 CREATE TABLE tipos_pets(
@@ -45,18 +47,22 @@ CREATE TABLE raca(
 CREATE TABLE pets(
 	IdPet INT IDENTITY PRIMARY KEY NOT NULL,
 	Nome VARCHAR (100) NOT NULL,
-	DataNascimento DATETIME NOT NULL,
+	DataNascimento DATETIME,
 
 	IdRaca INT FOREIGN KEY REFERENCES raca (IdRaca) NOT NULL,
-	IdDono INT FOREIGN KEY REFERENCES donos (IdDono) NOT NULL
+	IdDono INT FOREIGN KEY REFERENCES donos (IdDono)
 );
+
+-- DROP TABLE pets;
 
 /*Criação da tabela - Atendimento*/
 CREATE TABLE atendimento(
 	IdAtendimentos INT IDENTITY PRIMARY KEY NOT NULL,
 	DescricaoAt VARCHAR (1000) NOT NULL,
-	DataAtendimento DATETIME NOT NULL,
+	DataAtendimento DATETIME,
 
 	IdVeterinario INT FOREIGN KEY REFERENCES veterinarios (IdVeterinario) NOT NULL,
 	IdPet INT FOREIGN KEY REFERENCES pets (IdPet) NOT NULL
 );
+
+-- DROP TABLE atendimento;

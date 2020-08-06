@@ -26,8 +26,11 @@ CREATE TABLE albuns(
 	Localizacao VARCHAR (50) NOT NULL,
 	StatusAlbum VARCHAR (10) NOT NULL,
 
-	IdArtista INT FOREIGN KEY REFERENCES artistas (IdArtista)
+	IdArtista INT FOREIGN KEY REFERENCES artistas (IdArtista),
+	IdEstilo INT FOREIGN KEY REFERENCES estilos (IdEstilo)
 );
+
+-- DROP TABLE albuns;
 
 /*Criação da tabela - Usuários*/
 CREATE TABLE usuarios(

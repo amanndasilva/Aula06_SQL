@@ -25,3 +25,16 @@ SELECT * FROM estilos WHERE IdEstilo > 3 AND IdEstilo <7;
 
 -- Seleciona dados ENTRE valores específicos
 SELECT * FROM estilos WHERE IdEstilo BETWEEN '3' AND '8';
+
+/*Aula - 09*/
+SELECT * FROM artistas;
+
+-- Seleciona elementos de uma tabela e os junta em uma outra
+SELECT 
+	artistas.Nome,
+	estilos.Nome,
+	albuns.Nome
+FROM albuns
+	INNER JOIN artistas ON albuns.IdArtista = artistas.Nome
+	INNER JOIN estilos ON albuns.IdEstilo = estilos.Nome
+;

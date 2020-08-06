@@ -28,8 +28,20 @@ SELECT * FROM veterinarios ORDER BY DescricaoVet DESC;
 
 -- Seleciona dados com condições específicas
 SELECT * FROM raca WHERE IdRaca > 2 AND IdRaca <6;
-
 SELECT * FROM raca;
 
 -- Seleciona dados ENTRE valores específicos
 SELECT * FROM raca WHERE IdRaca BETWEEN '2' AND '5';
+
+/*Aula - 09*/
+SELECT * FROM raca;
+
+-- Seleciona elementos de uma tabela e os junta em uma outra tabela
+SELECT
+	raca.DescricaoRaca,
+	veterinarios.Nome,
+	atendimento.IdPet
+FROM atendimento
+	INNER JOIN raca ON atendimento.IdAtendimentos = raca.IdRaca
+	INNER JOIN veterinarios ON atendimento.IdVeterinario = veterinarios.IdVeterinario
+;
