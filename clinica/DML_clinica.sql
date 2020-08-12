@@ -39,7 +39,7 @@ INSERT INTO atendimento (DescricaoAt, DataAtendimento, IdVeterinario, IdPet)
 SELECT * FROM atendimento;
 
 
--- UPDATE: altera dados
+-- UPDATE: altera os dados
 UPDATE raca SET
 	DescricaoRaca = 'Persa'
 WHERE IdRaca = 6;
@@ -48,7 +48,7 @@ UPDATE atendimento SET
 	DescricaoAt = 'O paciente está ok'
 WHERE IdAtendimentos = 1;
 
--- DEELETE: deleta dados
+-- DEELETE: deleta os dados
 -- DELETE FROM donos WHERE IdDono = 1;
 
 -- DQL: consulta de dados
