@@ -20,5 +20,5 @@ INSERT INTO usuarios (Nome, StatusUsuario, Senha, Email)
 	VALUES ('Jéssica', 'Ativo', '******', 'jessiquinha@gmail.com');
 SELECT * FROM usuarios;
 
--- UPDATE: alterar
--- DELETE: deletar
+-- UPDATE: alterar dados
+-- DELETE: deletar dados
